@@ -1,0 +1,43 @@
+{
+  "name": "teselagen-vscode-snippets",
+  "displayName": "teselagen-vscode-snippets",
+  "description": "Snippets and extensions for TeselaGen team.",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.30.0"
+  },
+  "categories": [
+    "Snippets"
+  ],
+  "contributes": {
+    "snippets": [
+      {
+        "language": "javascript",
+        "path": "./snippets/snippets.json"
+      },
+      {
+        "language": "javascriptreact",
+        "path": "./snippets/snippets.json"
+      }
+    ]
+  },
+  "extensionDependencies": [
+    "alefragnani.project-manager",
+    "Atishay-Jain.All-Autocomplete",
+    "azemoh.one-monokai",
+    "christian-kohler.path-intellisense",
+    "dbaeumer.vscode-eslint",
+    "eamodio.gitlens",
+    "EditorConfig.EditorConfig",
+    "esbenp.prettier-vscode",
+    "formulahendry.auto-close-tag",
+    "formulahendry.auto-rename-tag",
+    "ms-vscode.sublime-keybindings",
+    "Orta.vscode-jest",
+    "robertohuertasm.vscode-icons",
+    "sleistner.vscode-fileutils",
+    "techer.open-in-browser",
+    "tgreen7.vs-code-node-require",
+    "tnrich.js-path-refactor"
+  ]
+}

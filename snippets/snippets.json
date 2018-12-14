@@ -1,0 +1,143 @@
+{
+  "Print to console": {
+    "prefix": "cc",
+    "body": ["console.log(\"$1\")"],
+    "description": "Log output to console"
+  },
+  "Print to console as error with variable": {
+    "prefix": "ce",
+    "body": ["console.error(\"$1:\", $1)"],
+    "description": "Log error to console"
+  },
+  "Print to console JSON stringified": {
+    "prefix": "cj",
+    "body": ["console.log(\"$1:\", JSON.stringify($1, null, 2))"],
+    "description": "Log output to console stringified"
+  },
+  "Debugger": {
+    "prefix": "dd",
+    "body": ["debugger"],
+    "description": "add a debugger"
+  },
+  "Print to console with description": {
+    "prefix": "ccc",
+    "body": ["console.log(\"$1:\", $1)"],
+    "description": "Log output to console with description"
+  },
+  "React className": {
+    "prefix": "cn",
+    "body": ["className=\"$1\""],
+    "description": "React className"
+  },
+  "React class compoment": {
+    "prefix": "rcc",
+    "body": [
+      "import React, { Component } from \"react\"\n",
+      "class ${1:componentName} extends Component {",
+      "\trender() {",
+      "\t\treturn (",
+      "\t\t\t<div>",
+      "\t\t\t\t$0",
+      "\t\t\t</div>",
+      "\t\t)",
+      "\t}",
+      "}\n",
+      "export default ${1:componentName}"
+    ],
+    "description": "Creates a React component class with ES6 module system"
+  },
+  "React functional component": {
+    "prefix": "rfc",
+    "body": [
+      "import React from \"react\"\n",
+      "function ${1:componentName}({ ${2:prop} }) {",
+      "\treturn (",
+      "\t\t<div>",
+      "\t\t\t$0",
+      "\t\t</div>",
+      "\t)",
+      "}\n",
+      "export default ${1:componentName}"
+    ],
+    "description": "Creates a React functional component"
+  },
+  "Import React": {
+    "prefix": "imr",
+    "body": ["import React from \"react\""],
+    "description": "Import React"
+  },
+  "Import React and Component": {
+    "prefix": "imrc",
+    "body": ["import React, { Component } from \"react\""],
+    "description": "Import React and Component"
+  },
+  "Import lodash": {
+    "prefix": "lo",
+    "body": ["import {$1} from \"lodash\"$2"],
+    "description": "Import lodash"
+  },
+  "Import teselagen-react-components": {
+    "prefix": "trc",
+    "body": ["import {$1} from \"teselagen-react-components\"$2"],
+    "description": "Import teselagen-react-components"
+  },
+  "Import blueprint": {
+    "prefix": "blueprintjs",
+    "body": ["import {$1} from \"@blueprintjs/core\"$2"],
+    "description": "Import @blueprint"
+  },
+  "Import compose from react-apollo": {
+    "prefix": "compose",
+    "body": ["import { compose } from \"react-apollo\"$2"],
+    "description": "Import compose from react-apollo"
+  },
+  "eslintdisable": {
+    "prefix": "eslintdisable",
+    "body": "/* eslint-disable $1 */ \n/* eslint-enable $1 */"
+  },
+  "arrow function": {
+    "prefix": "fn",
+    "body": "($1) => {$2}",
+    "description": "Arrow Function"
+  },
+  "state": {
+    "prefix": "state",
+    "body": "const {$1} = this.state",
+    "description": "state react"
+  },
+  "props": {
+    "prefix": "props",
+    "body": "const {$1} = this.props",
+    "description": "props react"
+  },
+  "Import connect from react-redux": {
+    "prefix": "connect",
+    "body": ["import { connect } from \"react-redux\"$2"],
+    "description": "Import connect from react-redux"
+  },
+  "Import redux-form": {
+    "prefix": "redux-form",
+    "body": ["import { ${1:reduxForm} } from \"redux-form\"$2"],
+    "description": "Import redux-form"
+  },
+  "create toastr": {
+    "prefix": "toast",
+    "body": ["window.toastr.${1:error}($2)"],
+    "description": "create toastr"
+  },
+  "spacer": {
+    "prefix": "spacer",
+    "body": ["&nbsp;"],
+    "description": "spacer"
+  },
+  "it mocha": {
+    "prefix": "it",
+    "body": ["it(\"${1}\", () => {", "\t${2}", "});"],
+    "description": "Mocha::It"
+  },
+  "describe mocha": {
+    "prefix": "describe",
+    "body": ["describe(\"${1}\", () => {", "\t${2}", "});"],
+    "description": "Mocha::Describe"
+  }
+}
