@@ -3,6 +3,7 @@
   "displayName": "teselagen-vscode-snippets",
   "description": "Snippets and extensions for TeselaGen team.",
   "version": "0.0.1",
+  "license": "MIT",
   "engines": {
     "vscode": "^1.30.0"
   },
