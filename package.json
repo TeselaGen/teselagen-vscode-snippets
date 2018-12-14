@@ -3,7 +3,16 @@
   "displayName": "teselagen-vscode-snippets",
   "description": "Snippets and extensions for TeselaGen team.",
   "version": "0.0.1",
+  "publisher": "tgreen7",
   "license": "MIT",
+  "homepage": "https://github.com/TeselaGen/teselagen-vscode-snippets",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/TeselaGen/teselagen-vscode-snippets"
+  },
+  "bugs": {
+    "url": "https://github.com/TeselaGen/teselagen-vscode-snippets/issues"
+  },
   "engines": {
     "vscode": "^1.30.0"
   },
