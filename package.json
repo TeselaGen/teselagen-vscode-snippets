@@ -47,7 +47,6 @@
     "robertohuertasm.vscode-icons",
     "sleistner.vscode-fileutils",
     "techer.open-in-browser",
-    "tgreen7.vs-code-node-require",
-    "tnrich.js-path-refactor"
+    "tgreen7.vs-code-node-require"
   ]
 }
