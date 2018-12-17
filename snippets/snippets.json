@@ -139,5 +139,224 @@
     "prefix": "describe",
     "body": ["describe(\"${1}\", () => {", "\t${2}", "});"],
     "description": "Mocha::Describe"
+  },
+  "windowtoastrwarning": {
+    "prefix": "windowtoastrwarning",
+    "body": "window.toastr.warning('$1')"
+  },
+  "windowtoastrerror": {
+    "prefix": "windowtoastrerror",
+    "body": "window.toastr.error('$1')"
+  },
+  "windowtoastrinfo": {
+    "prefix": "windowtoastrinfo",
+    "body": "window.toastr.info('$1')"
+  },
+  "windowtoastrsuccess": {
+    "prefix": "windowtoastrsuccess",
+    "body": "window.toastr.success('$1')"
+  },
+  "beforeEach": {
+    "prefix": "beforeEach",
+    "body": "beforeEach(() => {$1})"
+  },
+  "multilinereactstring": {
+    "prefix": "randomstring",
+    "body": "`$1`.split('\n').map((l,i) => <div key={i}>{l}</div>"
+  },
+  "randomstring": {
+    "prefix": "randomstring",
+    "body": "Math.random().toString(36).substring(7)"
+  },
+  "Console log": {
+    "prefix": "ccc",
+    "body": "console.log('$1:',$1)"
+  },
+  "issue mover": {
+    "prefix": "issue mover",
+    "body": "https://github-issue-mover.appspot.com/"
+  },
+  "Console log parsed": {
+    "prefix": "cccj",
+    "body": "console.log('$1:',JSON.parse(JSON.stringify($1)))"
+  },
+  "Console log json": {
+    "prefix": "cj",
+    "body": "console.log('$1:',JSON.stringify($1,null,4))"
+  },
+  "Throw new error": {
+    "prefix": "thrown",
+    "body": "throw new Error('$1')"
+  },
+  "json": {
+    "prefix": "json",
+    "body": "JSON.stringify($1,null,4)"
+  },
+  "hoc": {
+    "prefix": "hoc",
+    "body": ["const HOC = (PassedComponent) => {",
+      "console.log('yup')",
+        "\treturn ({ children, ...props }) =>{",
+      "console.log('hey')",
+          "\t\treturn <PassedComponent {...props}>",
+            "\t\t\t{children}",
+          "\t\t</PassedComponent>}",
+      "}"]
+  },
+  "cc": {
+    "prefix": "cc",
+    "body": "console.log('$1')"
+  },
+  "html tags": {
+    "prefix": "kk",
+    "body": "<$3$1>$2</$1>"
+  },
+  "html tag": {
+    "prefix": "kl",
+    "body": "<$1/>"
+  },
+  "import": {
+    "prefix": "import",
+    "body": "import $3$1 from '$1$2'"
+  },
+  "rf": {
+    "prefix": "rf",
+    "body": "function $1(props) {\n    return <div className={'tg-'}>$2</div>\n}"
+  },
+  "thiscompare": {
+    "prefix": "thiscompare",
+    "body": "console.log('$1 === this.$1:',$1 === this.$1) \nthis.$1 = $1"
+  },
+  "jsontofilebrowser": {
+    "prefix": "jsontofilebrowser",
+    "body": "magicDownload(JSON.stringify(myData), 'myFile.json')"
+  },
+  "magicdownload": {
+    "prefix": "magicjsontofilebrowser",
+    "body": "magicDownload(JSON.stringify(myData), 'myFile.json')"
+  },
+  "multilinesnippetmaker": {
+    "prefix": "multilinesnippetmaker",
+    "body": "https://codepen.io/cbejensen/pen/WXLxaE"
+  },
+  "magicVerbose": {
+    "prefix": "magicverbosejsontofilebrowser",
+    "body": [
+      "\tfunction magicDownload(text, fileName) {",
+      "\t  let blob = new Blob([text], {",
+      "\t\ttype: \"text/csv;charset=utf8;\"",
+      "\t  });",
+      "\t",
+      "\t  // create hidden link",
+      "\t  let element = document.createElement(\"a\");",
+      "\t  document.body.appendChild(element);",
+      "\t  element.setAttribute(\"href\", window.URL.createObjectURL(blob));",
+      "\t  element.setAttribute(\"download\", fileName);",
+      "\t  element.style.display = \"\";",
+      "\t",
+      "\t  element.click();",
+      "\t",
+      "\t  document.body.removeChild(element);",
+      "\t}",
+      "\t",
+      "\tmagicDownload(JSON.stringify(myData), 'myFile.json')"
+    ]
+  },
+  "funnn": {
+    "prefix": "fn",
+    "body": "($2) => {$3}"
+  },
+  "funn": {
+    "prefix": "funn",
+    "body": "function $1($2) {\n    $3\n}"
+  },
+  "rr": {
+    "prefix": "rr",
+    "body": "var $3$1 = require('$1$2')"
+  },
+  "dd": {
+    "prefix": "dd",
+    "body": "debugger"
+  },
+  "foreach": {
+    "prefix": "foreach",
+    "body": "forEach(($1)=>{$2})"
+  },
+  "map": {
+    "prefix": "map",
+    "body": "map(($1)=>{$2})"
+  },
+  "reduceObj": {
+    "prefix": "reduce",
+    "body": "reduce((acc,$1)=>{\n  acc[key] = new;\n  return acc;\n}, {})"
+  },
+  "reduceString": {
+    "prefix": "reduce",
+    "body": "reduce((acc,$1)=>{\n  acc += 'something';\n  return acc;\n}, '')"
+  },
+  "cn": {
+    "prefix": "cnlassname",
+    "body": "className={'$1'}"
+  },
+  "styleflex": {
+    "prefix": "sttfyle",
+    "body": "style={{display: 'flex',${1: flexDirection: 'column', flexWrap: 'wrap', justifyContent: 'center'}}}"
+  },
+  "style": {
+    "prefix": "sttyle",
+    "body": "style={{$1}}"
+  },
+  "styles": {
+    "prefix": "tt",
+    "body": "style={styles.$1}"
+  },
+  "jsonToFile": {
+    "prefix": "jsonToFile",
+    "body": "require('jsonfile').writeFile(require('path').join(__dirname, '${1:TEMP.json}'), ${2:myObj}, {spaces: 4}, function (err) {\n  if (err) console.error('error writing json', err)\n})"
+  },
+  "stringToFile": {
+    "prefix": "stringToFile",
+    "body": "require('fs'').writeFile(require('path').join(__dirname, '${1:MYSTRING.txt}'), ${2:myString}, function (err) {\n  if (err) console.error('error writing string', err)\n})"
+  },
+  "mocha describe": {
+    "prefix": "describe",
+    "description": "React Redux Component",
+    "body": "describe('$1', function() {\n    $2\n})"
+  },
+  "mocha it": {
+    "prefix": "it",
+    "description": "React Redux Component",
+    "body": "it(`$1`, ()=> {\n    $2\n})"
+  },
+  "react class": {
+    "prefix": "classreactcomp",
+    "description": "React Component Boilerplate",
+    "body": "class $1 extends React.Component {\n  render () {\n    const {} = this.props\n    return (\n    \n    )\n  }\n}"
+  },
+  "setinterval": {
+    "prefix": "setinterval",
+    "description": "setinterval snippet",
+    "body": "setInterval(()=>{\n\t$1\n},1000)"
+  },
+  "ww": {
+    "prefix": "ww",
+    "description": "window global",
+    "body": "window.$1 = $1"
+  },
+  "setintervalx": {
+    "prefix": "setintervalx",
+    "description": "setintervalx",
+    "body": [
+      "for (let i = 0; i < ${1:numberOfTimes}; i++) {",
+      "\tsetTimeout(function () {",
+      "\t\t${3:// Do Something",
+      "\t}, i * ${2:interval})",
+      "}"
+    ]
+  },
+  "require": {
+    "prefix": "req",
+    "description": "require",
+    "body": "var $1 = require('$1')"
   }
 }
